@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/login/login.component';
 import { UsuarioComponent } from './modules/usuario/usuario.component';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +18,11 @@ import { UsuarioComponent } from './modules/usuario/usuario.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
